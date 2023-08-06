@@ -19,9 +19,9 @@ export async function POST(request: Request) {
   }
 
   const completion = await openai.chat.completions.create({
-    model: 'gpt-4',
+    model: 'gpt-3.5-turbo-16k',
     messages: [{ role: 'user', content: message }],
-    max_tokens: 4096,
+    max_tokens: 10000,
     stream: true,
   })
 
